@@ -39,7 +39,7 @@ export default class AddLink extends React.Component {
   render(){
     return(
       <div>
-        <button onClick={() => this.setState({isOpen: true})}>+ Add Link</button>
+        <button className="button" onClick={() => this.setState({isOpen: true})}>+ Add Link</button>
         <Modal
           isOpen={this.state.isOpen}
           contentLabel="Add link"
@@ -54,7 +54,7 @@ export default class AddLink extends React.Component {
               ref="url"
               value={this.state.url}
               onChange={this.onChange.bind(this)}/>
-            <button>Add Link</button>
+            <button className="button">Add Link</button>
           </form>
           <button onClick={this.handleModalClose.bind(this)}>Cancel</button>
         </Modal>
